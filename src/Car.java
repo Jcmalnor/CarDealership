@@ -5,6 +5,11 @@ public class Car {
 	private int year;
 	private double price;
 	
+	public String printCarDetails(Car c) {
+		String details = (c.getMake() + "\t" + c.getModel() + "\t" + c.getYear() + "\t($" + c.getPrice() +") ");
+		return details;
+	}
+	
 	public Car(String make, String model, int year, double price) {
 		super();
 		this.make = make;

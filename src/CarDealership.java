@@ -22,14 +22,10 @@ public class CarDealership {
 		carList.get(1).setPrice(29999.55);
 		
 		for (Car c: carList) {
-			if (c instanceof UsedCar)
-				System.out.print("USED: ");
-			else
-				System.out.print("NEW: ");
-			
-			System.out.print(c.getMake() + "\t" + c.getModel() + "\t" + c.getYear() + "\t($" + c.getPrice() +") ");
-			if (c instanceof UsedCar)
-			System.out.print("Miles: " + ((UsedCar)c).getMiles() );
+			if (c instanceof UsedCar) {
+				System.out.print("USED: " + c.printCarDetails(c) + " Miles: " + ((UsedCar)c).getMiles());
+			} else 
+				System.out.print("NEW: " + c.printCarDetails(c));
 			
 			System.out.println();
 		}
